@@ -1,0 +1,85 @@
+---
+// AMRO Pro proof band — merges previous TrustRow + OutcomesBar into one
+// dense section. "In pilot" is honest about pre-launch posture; Target chip
+// signals that the design-partner program is a forward-looking goal.
+
+const stats = [
+  {
+    value: '4',
+    label: 'Regulatory authorities',
+    note: 'FAA · EASA · CAAC · SACAA',
+    kind: 'fact',
+  },
+  {
+    value: '100%',
+    label: 'Audit trail per WO',
+    note: 'every state change is sourced + logged',
+    kind: 'fact',
+  },
+  {
+    value: '0',
+    label: 'Operator data lock-in',
+    note: 'export your records any time',
+    kind: 'fact',
+  },
+  {
+    value: 'In pilot',
+    label: 'Design partner program',
+    note: 'targeting Q3 2026 launch',
+    kind: 'projection',
+  },
+];
+
+const pills = [
+  'FAA · EASA · CAAC · SACAA — first-class',
+  'Built on Logic Nexus · multi-tenant',
+  'Audit trail per work order',
+  'Pilot Q3 2026 · with regional operators',
+];
+---
+
+<section class="border-y border-slate-800 bg-slate-950 text-slate-100">
+  <div class="motion-rise mx-auto max-w-6xl px-6 py-6 sm:py-8">
+    <p class="text-center text-[11px] font-medium uppercase tracking-[0.32em] text-purple-400">
+      Regulator-readable from day one
+    </p>
+
+    <dl class="mt-5 grid grid-cols-2 gap-y-5 gap-x-6 text-center sm:mt-6 sm:grid-cols-4">
+      {
+        stats.map((s) => (
+          <div>
+            <dt class="flex items-baseline justify-center gap-1.5 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              {s.value}
+              {s.kind === 'projection' && (
+                <span class="rounded-full border border-amber-700/50 bg-amber-950/40 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wider text-amber-300">
+                  Target
+                </span>
+              )}
+            </dt>
+            <dd class="mt-1 text-xs font-medium text-slate-200 sm:text-sm">
+              {s.label}
+            </dd>
+            <dd class="mt-0.5 text-[11px] text-slate-500">{s.note}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <div
+      class="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 border-t border-slate-800/60 pt-5"
+    >
+      {
+        pills.map((p) => (
+          <span class="rounded-full border border-slate-700/60 bg-slate-900/40 px-3 py-1 text-[11px] font-medium text-slate-300">
+            {p}
+          </span>
+        ))
+      }
+    </div>
+
+    <p class="mt-4 text-center text-[11px] text-slate-500">
+      <span class="font-medium text-amber-300">Target</span> = honest pre-launch
+      design goal, not a present-day claim.
+    </p>
+  </div>
+</section>
