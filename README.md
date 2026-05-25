@@ -15,7 +15,7 @@ npm run build    # static output to dist/
 
 ## Deployment
 
-Coolify pulls from `origin/main`. Hosted at https://amro.sosservices.online.
+Coolify pulls from `origin/main`. Hosted at https://amropro.sosservices.online.
 
 ## Brand
 

@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://amro.sosservices.online',
+  site: 'https://amropro.sosservices.online',
   vite: {
     plugins: [tailwindcss()],
   },

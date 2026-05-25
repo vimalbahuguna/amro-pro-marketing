@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amro.sosservices.online/sitemap-index.xml
+Sitemap: https://amropro.sosservices.online/sitemap-index.xml
