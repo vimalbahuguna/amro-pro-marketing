@@ -1,0 +1,44 @@
+---
+// AMRO Pro outcomes — regulatory coverage + audit posture is the entire pitch.
+// We're honest about being pre-pilot: the "design partners" claim wears a
+// Target badge so we never overstate readiness to a buyer.
+
+const stats = [
+  { value: '4', label: 'Regulatory authorities', note: 'FAA · EASA · CAAC · SACAA', kind: 'fact' },
+  { value: '100%', label: 'Audit trail per WO', note: 'every state change is sourced + logged', kind: 'fact' },
+  { value: 'In pilot', label: 'Design partner program', note: 'targeting Q3 2026 launch', kind: 'projection' },
+  { value: '0', label: 'Operator data lock-in', note: 'export your records any time', kind: 'fact' },
+];
+---
+
+<section class="border-y border-slate-800 bg-slate-950 text-slate-100">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+    <p class="mb-8 text-center text-xs font-medium uppercase tracking-[0.32em] text-purple-400">
+      Regulator-readable from day one
+    </p>
+    <dl class="grid grid-cols-2 gap-y-10 gap-x-6 text-center sm:grid-cols-4">
+      {
+        stats.map((s) => (
+          <div>
+            <dt class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              {s.value}
+            </dt>
+            <dd class="mt-2 text-sm font-medium text-slate-200">{s.label}</dd>
+            <dd class="mt-1 flex items-center justify-center gap-1.5 text-xs text-slate-400">
+              {s.kind === 'projection' && (
+                <span class="rounded-full border border-amber-700/50 bg-amber-950/40 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-amber-300">
+                  Target
+                </span>
+              )}
+              <span>{s.note}</span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="mt-8 text-center text-xs text-slate-500">
+      Numbers labelled <span class="font-medium text-amber-300">Target</span> are honest
+      pre-launch design goals, not present-day claims.
+    </p>
+  </div>
+</section>
