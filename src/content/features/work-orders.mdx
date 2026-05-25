@@ -1,0 +1,20 @@
+---
+name: Work Orders
+tagline: Task-level sign-off — every step traceable to a named technician
+description: Work orders broken into discrete tasks, each signed off by the responsible technician against the relevant license category, with timestamp and tooling. Audit-ready by construction.
+accent: '#9333ea'
+category: execution
+order: 2
+bullets:
+  - Task-level sign-off with named technician and license-category check
+  - Auto-linked to the MPD task and revision that authorized the work
+  - Findings + corrective actions captured as structured data
+  - Photo + measurement attachments per task
+  - 'Re-open and re-sign workflow for downstream defects — never silently overwrites history'
+---
+
+## What it does
+
+A work order is not a thing — it is a sequence of tasks, each performed by a specific person, each signed off against the right license category. AMRO Pro reflects that structure. The system enforces that a category B1 task can't be signed off by someone without that category. It records the tooling and consumables used. It captures findings as structured records linked back to the originating task.
+
+If a corrective action is needed later, the original sign-off is preserved and the corrective work links back to it. No silent overwrites, no "I'll fix it in the next version" data loss.

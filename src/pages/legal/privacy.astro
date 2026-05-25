@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const updated = '2026-05-25';
+---
+
+<Layout title="Privacy Policy — AMRO Pro" description="How AMRO Pro handles personal and operational data.">
+  <article class="mx-auto max-w-2xl px-6 py-20">
+    <p class="text-sm font-medium uppercase tracking-wider text-slate-500">Legal</p>
+    <h1 class="mt-3 text-4xl font-semibold tracking-tight">Privacy Policy</h1>
+    <p class="mt-2 text-sm text-slate-500">Last updated: {updated}</p>
+
+    <div class="prose prose-slate mt-10 max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-10 prose-h2:text-2xl">
+      <p>
+        A placeholder policy capturing the spirit of how AMRO Pro handles personal and
+        operational data. A full legal-reviewed policy replaces this before commercial
+        rollout.
+      </p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>Contact form submissions</strong> — name, work email, organization, message.</li>
+        <li><strong>Operational data</strong> (in app, post-launch) — fleet master data, work orders, parts, sign-offs. Tenant-isolated.</li>
+        <li><strong>Server logs</strong> — operational debugging only, short retention.</li>
+      </ul>
+
+      <h2>What we don't do</h2>
+      <ul>
+        <li>No ad networks. No third-party trackers on the marketing site.</li>
+        <li>No selling or sharing of customer operational data.</li>
+        <li>No LLM training on customer data.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>
+        Request access to or deletion of personal data by emailing{' '}
+        <a href="mailto:privacy@sosservices.online">privacy@sosservices.online</a>. We
+        respond within 7 days. Operational records (work orders, sign-offs) are subject
+        to regulator-mandated retention regardless of account closure.
+      </p>
+
+      <p class="text-sm text-slate-500">
+        Questions? <a href="/contact">Contact us</a>.
+      </p>
+    </div>
+  </article>
+</Layout>

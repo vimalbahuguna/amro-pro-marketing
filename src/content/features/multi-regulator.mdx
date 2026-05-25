@@ -1,0 +1,20 @@
+---
+name: Multi-Regulator Workflows
+tagline: FAA, EASA, CAAC, SACAA — first-class, not bolted on
+description: Each regulatory authority's forms, sign-off chains, deadlines, and category systems are modeled in the data layer. Adding a fifth authority is configuration, not a re-implementation.
+accent: '#c026d3'
+category: compliance
+order: 4
+bullets:
+  - 'Authority-aware sign-off chains — B1, B2, C category mapping per authority'
+  - Authority-specific form templates (8130-3, EASA Form 1, CAAC AAC-038, etc.)
+  - Per-authority deadline rules baked in (AD compliance windows, reporting cadence)
+  - Operator can hold approvals from multiple authorities simultaneously
+  - 'Reports generated in the authority-specific format the inspector expects'
+---
+
+## What it does
+
+Most MRO software was built for one regulator. Adding a second meant a "translation layer" — usually a PDF export with cosmetic relabeling. AMRO Pro is built differently. The four authorities supported today (FAA, EASA, CAAC, SACAA) are modeled in the data layer. Each has its own license-category schema, its own form templates, its own AD compliance window rules.
+
+When an operator holds approvals from multiple authorities simultaneously (a common case for international carriers), AMRO Pro tracks which authority's rules govern each aircraft and produces reports in each authority's expected format. Adding a fifth authority is a configuration exercise.

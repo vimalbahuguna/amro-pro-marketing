@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import MetricsBar from '../components/MetricsBar.astro';
+import { getCollection } from 'astro:content';
+
+const features = (await getCollection('features')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Layout>
+  {/* Hero */}
+  <section class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-purple-50 via-white to-white"></div>
+    <div class="mx-auto max-w-6xl px-6 pt-20 pb-24 text-center sm:pt-28 sm:pb-32">
+      <p class="text-sm font-medium uppercase tracking-wider text-purple-700">
+        A Product by SOS Services
+      </p>
+      <h1 class="mx-auto mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
+        MRO software the regulator can actually read.
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
+        AMRO Pro is built for regional carriers and MRO operators who can't afford a
+        seven-figure SAP rollout — but can't afford a missed inspection either. FAA,
+        EASA, CAAC, and SACAA workflows are first-class, not bolted on.
+      </p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact"
+          class="rounded-lg bg-purple-700 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-purple-600"
+        >
+          Request a demo
+        </a>
+        <a
+          href="#features"
+          class="rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-medium text-slate-900 hover:border-slate-300"
+        >
+          See the platform →
+        </a>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">
+        FAA · EASA · CAAC · SACAA · Multi-tenant · Audit-ready
+      </p>
+    </div>
+  </section>
+
+  {/* Engineering-output metrics */}
+  <MetricsBar />
+
+  {/* Features grid */}
+  <section id="features" class="mx-auto max-w-6xl px-6 py-20">
+    <div class="mb-10 flex items-end justify-between">
+      <div>
+        <h2 class="text-3xl font-semibold tracking-tight">What's inside AMRO Pro</h2>
+        <p class="mt-2 text-slate-600">
+          Eight modules that connect a maintenance manual to a regulator-ready record.
+        </p>
+      </div>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {features.map((feature) => <FeatureCard feature={feature} />)}
+    </div>
+  </section>
+
+  {/* Why */}
+  <section class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-6 py-20">
+      <h2 class="text-3xl font-semibold tracking-tight">Why AMRO Pro instead of a 1990s MRO suite</h2>
+      <dl class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <dt class="font-medium">Built for four regulators from day one</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            FAA, EASA, CAAC, SACAA. Not "FAA with a translation layer." Authority-aware
+            forms, deadlines, sign-off chains.
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Provenance, not paperwork</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            Every task signed off has a digital chain — who, when, against which MPD
+            revision, against which AD. Inspectors get evidence, not stapled binders.
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Multi-tenant, multi-MRO</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            Independent MROs serving multiple operators share a platform without sharing
+            data. Each operator's records are their own.
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Parts traceability that holds up</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            Chain-of-custody from purchase order to installation, with airworthiness
+            tags preserved. No more spreadsheets-of-truth that crumble during an audit.
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Modern engineering</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            Express microservice, React frontend, Postgres with RLS. The same stack
+            powering modern SaaS — applied to a field that's been stuck on Oracle Forms.
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">No license-by-airframe pricing</dt>
+          <dd class="mt-2 text-sm text-slate-600">
+            Per-tenant SaaS pricing. Add an aircraft, the math doesn't break. Add a
+            regulator, the platform doesn't need a re-implementation.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  {/* Pricing teaser */}
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <div class="rounded-2xl border border-slate-200 bg-white p-10 text-center">
+      <p class="text-sm font-medium uppercase tracking-wider text-slate-500">Pricing</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-tight">Per-tenant, transparent, soon.</h2>
+      <p class="mx-auto mt-4 max-w-xl text-slate-600">
+        AMRO Pro is in closed pilot with regional carriers and independent MROs. Pricing
+        tiers will publish here once we've validated them against real fleet sizes.
+      </p>
+      <a
+        href="/contact"
+        class="mt-6 inline-block rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
+      >
+        Request early access
+      </a>
+    </div>
+  </section>
+
+  {/* From the studio rail */}
+  <section class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-6 py-16">
+      <div class="mb-8 flex items-end justify-between">
+        <div>
+          <p class="text-sm font-medium uppercase tracking-wider text-purple-700">From the studio</p>
+          <h2 class="mt-2 text-2xl font-semibold tracking-tight">How we build AMRO Pro</h2>
+        </div>
+        <a
+          href="https://sosservices.online/engineering/"
+          class="hidden text-sm text-slate-600 hover:text-slate-900 sm:block"
+          target="_blank"
+          rel="noreferrer"
+        >
+          All engineering posts ↗
+        </a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          href="https://sosservices.online/engineering/when-an-mro-outgrows-spreadsheets/"
+          class="block rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-slate-300 hover:shadow-md"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p class="text-xs font-medium uppercase tracking-wider text-purple-700">MRO</p>
+          <h3 class="mt-2 text-lg font-semibold tracking-tight text-slate-900">
+            When an MRO outgrows spreadsheets
+          </h3>
+          <p class="mt-2 text-sm text-slate-600">
+            The specific failure modes that arrive when work orders, parts, and
+            airworthiness records all live in Excel. Why the next step usually isn't SAP.
+          </p>
+          <p class="mt-3 text-sm font-medium text-slate-900">Read on sosservices.online →</p>
+        </a>
+        <a
+          href="https://sosservices.online/engineering/multi-tenant-rls-at-studio-scale/"
+          class="block rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-slate-300 hover:shadow-md"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p class="text-xs font-medium uppercase tracking-wider text-slate-500">Engineering</p>
+          <h3 class="mt-2 text-lg font-semibold tracking-tight text-slate-900">
+            Multi-tenant RLS at studio scale
+          </h3>
+          <p class="mt-2 text-sm text-slate-600">
+            How AMRO Pro isolates MRO operators sharing a platform. The 905-migration
+            drift incident. The zombie connections that blocked an ALTER TABLE.
+          </p>
+          <p class="mt-3 text-sm font-medium text-slate-900">Read on sosservices.online →</p>
+        </a>
+        <a
+          href="https://aviation.sosservices.online"
+          class="block rounded-2xl border border-red-200 bg-red-50/40 p-6 transition hover:border-red-300 hover:shadow-md"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p class="text-xs font-medium uppercase tracking-wider text-red-700">Sibling product</p>
+          <h3 class="mt-2 text-lg font-semibold tracking-tight text-slate-900">
+            Aviation AI Pro — flight data analytics
+          </h3>
+          <p class="mt-2 text-sm text-slate-600">
+            ARINC 717 parsing, multi-vendor DLU decoding, approach scoring, DGCA-ready
+            exports. AMRO's safety-data cousin in the studio.
+          </p>
+          <p class="mt-3 text-sm font-medium text-slate-900">Visit aviation.sosservices.online →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

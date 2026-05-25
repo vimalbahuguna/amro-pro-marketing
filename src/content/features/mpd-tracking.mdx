@@ -1,0 +1,20 @@
+---
+name: MPD Tracking
+tagline: Maintenance Planning Document as a first-class data model, not a PDF
+description: AMRO Pro models the MPD as live data. Tasks, intervals, applicability, and revisions are queryable, diffable, and tied to every work order they trigger.
+accent: '#7e22ce'
+category: planning
+order: 1
+bullets:
+  - Tasks, intervals, applicability rules stored as structured data
+  - Revision diff between MPD versions in one screen
+  - Applicability filters by aircraft type, serial, fleet, registration
+  - Auto-generates work orders when interval thresholds approach
+  - Full history of which MPD revision each completed task ran against
+---
+
+## What it does
+
+A maintenance planning document is the operator's bible — and most operators store it as a PDF on a SharePoint. When the OEM revises it, someone manually translates the diff into Excel. When an inspector asks "which revision was this task run against?" the answer takes hours to assemble.
+
+AMRO Pro treats the MPD as data. Tasks, intervals, applicability conditions, and revisions are first-class entities. Diff between revisions is computed, not eyeballed. Every work order generated against an MPD task captures the revision it was authorized against, so audit reconstruction is immediate.

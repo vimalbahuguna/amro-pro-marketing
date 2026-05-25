@@ -1,0 +1,33 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/#features', label: 'Features' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Demo' },
+];
+const current = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:gap-6 sm:px-6">
+    <a href="/" class="flex shrink-0 items-center gap-2 font-semibold tracking-tight">
+      <span class="inline-block h-6 w-6 rounded bg-purple-700"></span>
+      <span class="hidden sm:inline">AMRO Pro</span>
+    </a>
+    <nav class="flex items-center gap-3 text-xs sm:gap-6 sm:text-sm">
+      {
+        links.map(({ href, label }) => (
+          <a
+            href={href}
+            class:list={[
+              'transition-colors hover:text-slate-900',
+              current === href ? 'text-slate-900' : 'text-slate-600',
+            ]}
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

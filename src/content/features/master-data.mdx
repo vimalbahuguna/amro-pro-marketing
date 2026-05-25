@@ -1,0 +1,20 @@
+---
+name: Fleet Master Data
+tagline: One source of truth for aircraft, fleet hierarchy, locations, technicians
+description: A clean master-data layer for the things that don't change daily but must always agree — registrations, MSNs, fleet groupings, base locations, technician licenses.
+accent: '#f0abfc'
+category: platform
+order: 7
+bullets:
+  - Aircraft master with registration, MSN, fleet, base, regulator
+  - Fleet groupings for MPD scoping and reporting roll-ups
+  - Location hierarchy (line / hangar / base) for movement tracking
+  - 'Technician records with license categories, type ratings, currency dates'
+  - Tenant-isolated under Postgres row-level security
+---
+
+## What it does
+
+Master data is the unglamorous foundation. If your fleet table disagrees with your work-order table about an aircraft's registration, your reports are wrong. AMRO Pro keeps the master data normalized and tenant-isolated — every operational record references the master entity, never duplicates its fields.
+
+Technician records track license categories, type ratings, and currency dates. The sign-off enforcement at the work-order level reaches into this data to verify that the named technician actually held the right category on the date the task was completed. No surprises during the audit.

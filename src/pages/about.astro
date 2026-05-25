@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About AMRO Pro"
+  description="AMRO Pro is enterprise MRO software built by SOS Services — regulator-aware, multi-tenant, designed for the inspector as much as the operator."
+>
+  <section class="mx-auto max-w-3xl px-6 py-20">
+    <p class="text-sm font-medium uppercase tracking-wider text-purple-700">About</p>
+    <h1 class="mt-3 text-4xl font-semibold tracking-tight">MRO that the regulator can actually use.</h1>
+
+    <div class="prose prose-slate mt-10 max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl">
+      <p class="text-lg text-slate-700">
+        AMRO Pro is built by <a href="https://sosservices.online">SOS Services</a> for
+        the operators and MROs that fall between two stools: too big for spreadsheets,
+        too small for a seven-figure SAP rollout. We started with one observation —
+        most MRO software was designed for the IT department, not the inspector.
+      </p>
+
+      <h2>The problem</h2>
+      <p>
+        Aircraft maintenance is a paperwork industry pretending to be a software industry.
+        Operators run spreadsheets to track AD compliance, paper binders for work orders,
+        and email threads for sign-offs. When the inspector arrives, someone spends a
+        week reconstructing the audit trail.
+      </p>
+      <p>
+        The existing software market has two answers. One: a million-dollar enterprise
+        suite that takes a year to implement and freezes processes the day it goes live.
+        Two: vertical point tools (one for parts, one for MPDs, one for work orders) that
+        don't talk to each other. Neither serves the operator running 10–80 aircraft.
+      </p>
+
+      <h2>What we built</h2>
+      <ul>
+        <li>
+          <strong>Multi-regulator from day one</strong> — FAA, EASA, CAAC, SACAA. Each
+          authority's forms, sign-off chains, and deadlines are modeled in the data
+          layer, not patched into a UI.
+        </li>
+        <li>
+          <strong>MPD-driven work orders</strong> — a maintenance planning document
+          generates the work orders, the work orders link back to MPD revisions, and
+          the audit chain falls out naturally.
+        </li>
+        <li>
+          <strong>Parts traceability</strong> — chain-of-custody from PO to installation,
+          with airworthiness tags preserved. The data model treats a serial-numbered
+          rotable as a first-class entity, not a row in an Excel sheet.
+        </li>
+        <li>
+          <strong>Task-level sign-off</strong> — every task signed by the named
+          technician, against the relevant license category, with timestamp.
+        </li>
+        <li>
+          <strong>Modern engineering</strong> — Express microservice, React frontend,
+          Postgres with row-level security. Multi-tenant. Open schema.
+        </li>
+      </ul>
+
+      <h2>Where it stands</h2>
+      <p>
+        In closed pilot with regional operators and independent MROs. Backend microservice
+        (services/amro-api/) is operational, exposing master data, work orders, parts, MPDs,
+        and directives. Pilot customers' fleets are loaded; first real inspections coming.
+      </p>
+
+      <h2>Who we are</h2>
+      <p>
+        AMRO Pro is the aviation-maintenance product in the SOS Services studio. Its
+        sister product is <a href="https://aviation.sosservices.online">Aviation AI Pro</a>,
+        which handles the safety-data side (FDR parsing, approach analytics). Together
+        they cover the operational and safety halves of an aviation operator's data.
+      </p>
+    </div>
+  </section>
+</Layout>
