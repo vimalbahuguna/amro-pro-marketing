@@ -18,35 +18,48 @@ const features = (await getCollection('features')).sort(
     <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" aria-hidden="true"></div>
     <div class="pointer-events-none absolute -right-32 top-1/3 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" aria-hidden="true"></div>
 
-    <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28">
-      <p class="text-xs font-medium uppercase tracking-[0.32em] text-purple-400">
-        A product by SOS Services · 4 regulatory authorities
-      </p>
-      <h1 class="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
-        MRO software the regulator can actually read.
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-        Built for regional carriers and MRO operators who can't afford a seven-figure SAP
-        rollout — but can't afford a missed inspection either. FAA, EASA, CAAC, and SACAA
-        workflows are first-class, not bolted on.
-      </p>
-      <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a
-          href="/contact"
-          class="rounded-lg bg-purple-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-purple-400"
-        >
-          Join AMRO Pro pilot
-        </a>
-        <a
-          href="#features"
-          class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-900"
-        >
-          See the platform →
-        </a>
+    <div class="relative mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="text-center lg:text-left">
+          <p class="text-xs font-medium uppercase tracking-[0.32em] text-purple-400">
+            A product by SOS Services · 4 regulatory authorities
+          </p>
+          <h1 class="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            MRO software the regulator can actually read.
+          </h1>
+          <p class="mt-6 text-lg text-slate-300">
+            Built for regional carriers and MRO operators who can't afford a
+            seven-figure SAP rollout — but can't afford a missed inspection either.
+            FAA, EASA, CAAC, and SACAA workflows are first-class, not bolted on.
+          </p>
+          <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
+            <a
+              href="/contact"
+              class="rounded-lg bg-purple-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-purple-400"
+            >
+              Join AMRO Pro pilot
+            </a>
+            <a
+              href="#features"
+              class="rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-900"
+            >
+              See the platform →
+            </a>
+          </div>
+          <p class="mt-6 text-xs text-slate-500">
+            FAA · EASA · CAAC · SACAA · Multi-tenant · Audit-ready
+          </p>
+        </div>
+        <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-800/60 bg-slate-900/40 shadow-2xl shadow-purple-500/10 backdrop-blur">
+          <img
+            src="/app-preview.svg"
+            alt="AMRO Pro — multi-regulator work order workspace"
+            loading="eager"
+            decoding="async"
+            class="h-full w-full object-cover object-top"
+          />
+        </div>
       </div>
-      <p class="mt-6 text-xs text-slate-500">
-        FAA · EASA · CAAC · SACAA · Multi-tenant · Audit-ready
-      </p>
     </div>
   </section>
 
